@@ -17,8 +17,6 @@ class ListaDeCompras
 Adicionar item: 1
 Remover item: 2
 Listar itens: 3
-Comprar item: 4
-Opção 5: 5
 Sair do menu: 0"+"\n");
             string opcao = Console.ReadLine();
             if (opcao == "1")
