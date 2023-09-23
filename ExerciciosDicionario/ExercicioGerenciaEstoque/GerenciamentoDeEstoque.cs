@@ -32,11 +32,9 @@ class GerenciamentoDeEstoque
 			
             itens.Add(produto, quantidade);
 
-            Console.WriteLine("Deseja adicinaro mais itens ? (S/N) ");
-            string opcao = Console.ReadLine();
-            opcao = opcao.ToUpper();
+			string opcao = Opcao();
 
-            if (opcao == "N")
+			if (opcao == "N")
             {
                 return itens;
             }else if (opcao == "S")
@@ -49,9 +47,7 @@ class GerenciamentoDeEstoque
 
 				itens.Add(produto, quantidade);
 
-				Console.WriteLine("Deseja adicinaro mais itens ? (S/N) ");
-				opcao = Console.ReadLine();
-				opcao = opcao.ToUpper();
+				opcao = Opcao();
 
 				if (opcao == "N")
                 {
@@ -64,22 +60,21 @@ class GerenciamentoDeEstoque
                 while (opcao != "S" && opcao != "N")
                 {
 					Console.WriteLine("Opcão inválida.");
-					Console.WriteLine("Deseja adicinaro mais itens ? (S/N) ");
-					opcao = Console.ReadLine();
-					opcao = opcao.ToUpper();
+					opcao = Opcao();
 
 				}
                 return itens;
             }
-
-
-
 		}
-		
+	}
 
+	public string Opcao()
+	{
+		Console.WriteLine("Deseja adicinaro mais itens ? (S/N) ");
+		string opcao = Console.ReadLine();
+		opcao = opcao.ToUpper();
 
-
-
+		return opcao;
 	}
 
 }
