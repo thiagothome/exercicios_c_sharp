@@ -61,16 +61,19 @@ class GerenciamentoDeEstoque
                 {
 					Console.WriteLine("Opcão inválida.");
 					opcao = Opcao();
+					if (opcao == "N")
+					{
+						return itens;
+					}
 
 				}
-                return itens;
             }
 		}
 	}
 
 	public string Opcao()
 	{
-		Console.WriteLine("Deseja adicinaro mais itens ? (S/N) ");
+		Console.WriteLine("Deseja adicinar mais itens ? (S/N) ");
 		string opcao = Console.ReadLine();
 		opcao = opcao.ToUpper();
 
